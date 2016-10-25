@@ -1,3 +1,6 @@
 footer .functions {
   display: flex;
 }
+.popup-form-item[type="text"] {
+  height: 30px;
+}

@@ -10,12 +10,14 @@
         <div class="device-logo">
           <img src="img/device-logo-1.jpg" alt="Device">
         </div>
-        <div class="functions">
-          <label>
-            <a href="#">поиск</a>
-            <input type="text" name="search" placeholder="Поиск по сайту">
-          </label>
-          <div class="user-block">
+        <div class="user-block">
+          <form class="search-block" action="https://device.ru" method="post">
+            <label class="search-tag">
+              <a class="search-icon" href="#">поиск</a>
+              <input class="search-item" type="text" name="search" placeholder="Поиск по сайту">
+            </label>
+          </form>
+          <div class="login-block">
             <a class="login" href="#">Вход</a>
           </div>
           <div class="compare-block">
@@ -26,17 +28,37 @@
           </div>
         </div>
         <nav class="main-navigation">
-          <ul>
-            <li>
+          <ul class="main-navigation-list">
+            <li class="main-navigation-item">
               <a href="#">Каталог товаров</a>
+              <ul class="main-navigation-catalog-list">
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Экшн-камеры</a>
+                </li>
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Фитнесс-браслеты</a>
+                </li>
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Умные часы</a>
+                </li>
+                <li class="main-navigation-catalog-item">
+                  <a class="main-navigation-catalog-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
             </li>  
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Доставка</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Гарантия</a>
             </li>
-            <li>
+            <li class="main-navigation-item">
               <a href="#">Контакты</a>
             </li>
           </ul>  
