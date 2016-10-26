@@ -8,17 +8,17 @@
     <header class="main-header">
       <div class="container">
         <div class="device-logo">
-          <img src="img/device-logo-1.jpg" alt="Device">
+          <a class="device-link">
+            <img src="img/device-logo-1.jpg" alt="Device">
+          </a>
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <label class="search-tag">
-              <a class="search-icon" href="#">поиск</a>
-              <input class="search-item" type="text" name="search" placeholder="Поиск по сайту">
-            </label>
+              <input class="search-text" type="text" name="search" placeholder="Поиск по сайту">
+              <input class="search-btn" type="submit" value="Найти">
           </form>
           <div class="login-block">
-            <a class="login" href="#">Вход</a>
+            <a class="login" href="#">Валентин Петухов</a>
           </div>
           <div class="compare-block">
             <a class="compare" href="#">Сравнить</a>
@@ -66,99 +66,154 @@
       </div>
     </header>
     <main class="container">
-      <div class="second-navigation">
+      <div class="content-header">
         <h1>Моноподы для селфи</h1>
-        <ul>
-          <li>
-            <a href="#">Главная</a>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="#">Главная</a>
           </li>
-          <li>
-            <a href="#">Каталог товаров</a>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
           </li>
-          <li>
-            <a href="#">Моноподы для селфи</a>
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link">Моноподы для селфи</a>
           </li>  
         </ul>
       </div>
-      <div class="filters">
-        <span>Фильтр:</span>
+      <div class="filter-form">
+        <h3>Фильтр:</h3>
         <div class="filters-item">
           <form action="https://device.ru" method="post">
-            <span>Стоимость</span>
-            <!-- Здесь будет ползунок -->
-            <span>Цвет</span>
-            <label>
-              <input type="checkbox">
-              Черный
-            </label>
-            <label>
-              <input type="checkbox">
-              Белый
-            </label>
-            <label>
-              <input type="checkbox">
-              Синий
-            </label>
-            <label>
-              <input type="checkbox">
-              Красный
-            </label>
-            <label>
-              <input type="checkbox">
-              Розовый
-            </label>
-            <span>Bluetooth</span>
-            <label>
-              <input type="radio" name="bluetooth" value="yes">
-              Есть
-            </label>
-            <label>
-              <input type="radio" name="bluetooth" value="no">
-              Нет
-            </label>
+            <div class="filter-price">
+              <h4>Стоимость</h4>
+              <!-- Здесь будет ползунок -->
+            </div>
+            <div class="filter-color">
+              <h4>Цвет</h4>
+              <label>
+                <input type="checkbox" name="color">
+                Черный
+              </label>
+              <label>
+                <input type="checkbox" name="color">
+              </label>
+              <label>
+                <input type="checkbox" name="color">
+                Синий
+              </label>
+              <label>
+                <input type="checkbox" name="color">
+                Красный
+              </label>
+              <label>
+                <input type="checkbox" name="color">
+                Розовый
+              </label>
+            </div>
+            <div class="filter-bluetooth">
+             <h4>Bluetooth</h4>
+             <label>
+               <input type="radio" name="bluetooth" value="yes">
+               Есть
+              </label>
+              <label>
+                <input type="radio" name="bluetooth" value="no">
+                Нет
+             </label>
+            </div>
+            <input class="btn" type="submit" value="Показать">
           </form>
-          <a class="btn" href="#">Показать</a>
         </div>
       </div>
-      <div class="sorting">
-        <div class="sorting-item">
-          <span>Сортировка:</span>
-          <form action="https://device.ru" method="post">
-            <label>
-              <input type="radio" name="sorting-items" value="price">
-              По цене
-            </label>
-            <label>
-              <input type="radio" name="sorting-items" value="type">
-              По типу
-            </label>
-            <label>
-              <input type="radio" name="sorting-items" value="popularity">
-              По популярности
-            </label>
-          </form>
-          <!-- Здесь будут стрелки -->
+      <div class="catalog">
+        <div class="sorting">
+          <h3>Сортировка:</h3>
+          <div class="sorting-item">
+            <a class="sorting-link">По цене</a>
+            <a class="sorting-link" href="#">По типу</a>  
+            <a class="sorting-link" href="#">По популярности</a>
+          </div>
+          <div class="sorting-arrow">
+            <a class="sorting-arrow-up" href="">Вверх</a>
+            <a class="sorting-arrow-down" href="">Вниз</a>
+          </div>  
         </div>
-        <div class="goods-card">
-          <div class="goods-card-item">
-            <img src=img/amateur-selfie-stick.jpg alt="Любительская селфи-палка">
-            Любительская селфи-палка
-            500 руб.
+        <div class="catalog-list">
+          <div class="catalog-item">
+            <div class="catalog-item-foto">
+              <img src=img/amateur-selfie-stick.jpg alt="Любительская селфи-палка">
+              <div class="catalog-item-actions">
+                <form class="catalog-item-form" action="https://device.ru" method="post">
+                  <input class="btn" type="submit" value="В корзину">
+                </form> 
+                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+            <div class="catalog-item-description">
+              <h4>
+                <a class="catalog-item-link" href="#">Любительская селфи-палка</a>
+              </h4>
+              <div class="catalog-item-price">
+                500 руб.
+              </div>
+            </div>
           </div>
-          <div class="goods-card-item">
-            <img src=img/professional-selfie-stick.jpg alt="Профессиональная селфи-палка">
-            Профессиональная селфи-палка
-            1 500 руб.
+          <div class="catalog-item">
+            <div class="catalog-item-foto">
+              <img src=img/professional-selfie-stick.jpg alt="Профессиональная селфи-палка">
+              <div class="catalog-item-actions">
+                <form class="catalog-item-form" action="https://device.ru" method="post">
+                  <input class="btn" type="submit" value="В корзину">
+                </form> 
+                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+            <div class="catalog-item-description">
+              <h4>
+                <a class="catalog-item-link" href="#">Профессиональная селфи-палка</a>
+              </h4>
+              <div class="catalog-item-price">
+                1 500 руб.
+              </div>
+            </div>
           </div>
-          <div class="goods-card-item">
-            <img src=img/unsinkable-selfie-stick.jpg alt="Непотопляемая селфи-палка">
-            Непотопляемая селфи-палка
-            2 500 руб.
+          <div class="catalog-item">
+            <div class="catalog-item-foto">
+              <img src=img/unsinkable-selfie-stick.jpg alt="Непотопляемая селфи-палка">
+              <div class="catalog-item-actions">
+                <form class="catalog-item-form" action="https://device.ru" method="post">
+                  <input class="btn" type="submit" value="В корзину">
+                </form> 
+                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+            <div class="catalog-item-description">
+              <h4>
+                <a class="catalog-item-link" href="#">Непотопляемая селфи-палка</a>
+              </h4>
+              <div class="catalog-item-price">
+                2 500 руб.
+              </div>
+            </div>
           </div>
-          <div class="goods-card-item">
-            <img src=img/follow-me-selfie-stick.jpg alt="Селфи палка «Следуй за мной»">
-            Селфи палка «Следуй за мной»
-            4 900 руб.
+          <div class="catalog-item">
+            <div class="catalog-item-foto">
+              <img src=img/follow-me-selfie-stick.jpg alt="Селфи палка «Следуй за мной»">
+              <div class="catalog-item-actions">
+                <form class="catalog-item-form" action="https://device.ru" method="post">
+                  <input class="btn" type="submit" value="В корзину">
+                </form> 
+                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+              </div>
+            </div>
+            <div class="catalog-item-description">
+              <h4>
+                <a class="catalog-item-link" href="#">Селфи палка «Следуй за мной»</a>
+              </h4>
+              <div class="catalog-item-price">
+                4 900 руб.
+              </div>
+            </div>
           </div>
         </div>
         <div class="paginator">
