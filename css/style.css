@@ -1,6 +1,28 @@
-footer .functions {
-  display: flex;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
+  letter-spacing: 0.01em;
 }
-.popup-form-item[type="text"] {
-  height: 30px;
+
+h2 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 47px;
+  line-height: 94px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.01em;
 }
+
+h4 {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+
