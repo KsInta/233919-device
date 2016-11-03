@@ -8,9 +8,7 @@
   <body>
     <header class="main-header container">
       <div class="device-logo">
-        <a href="https://device.ru">
-          <span class="logo">Device</span>
-        </a>
+        <a href="https://device.ru">Device</a>
       </div>
       <div class="user-block">
         <form class="search-block" action="https://device.ru" method="post">
@@ -65,8 +63,8 @@
         </ul>  
       </nav>
     </header>
-    <main class="container">
-      <div class="content-header">
+    <main>
+      <div class="content-header container">
         <h2>Моноподы для селфи</h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -81,6 +79,7 @@
         </ul>
       </div>
       <div class="products-area">
+        <div class="products-area container">
         <div class="filter-form">
           <h3>Фильтр:</h3>
           <div class="filters-item">
@@ -127,7 +126,7 @@
                   </li>
                 </ul>
               </div>
-              <button class="filter-btn" type="submit" name="filter-button">Показать</button>
+              <button class="btn search-btn" type="submit" name="filter-button">Показать</button>
             </form>
           </div>
         </div>
@@ -149,6 +148,10 @@
               <div class="catalog-item-content">
                 <div class="catalog-item-image">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <div class="catalog-item-actions">
+                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+                  </div>
                 </div>
                 <div class="catalog-item-description">
                   <h4>
@@ -159,15 +162,15 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog-item-actions">
-                <a class="btn" href="#">В корзину</a>
-                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
-              </div>
             </div>
             <div class="catalog-item">
               <div class="catalog-item-content">
                 <div class="catalog-item-image">
                   <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  <div class="catalog-item-actions">
+                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+                  </div>
                 </div>
                 <div class="catalog-item-description">
                   <h4>
@@ -178,15 +181,15 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog-item-actions">
-                <a class="btn" href="#">В корзину</a>
-                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
-              </div>
             </div>
             <div class="catalog-item">
               <div class="catalog-item-content">
                 <div class="catalog-item-image">
                   <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <div class="catalog-item-actions">
+                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+                  </div>
                 </div>  
                 <div class="catalog-item-description">
                   <h4>
@@ -197,15 +200,15 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog-item-actions">
-                <a class="btn" href="#">В корзину</a>
-                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
-              </div>
             </div>
             <div class="catalog-item">
               <div class="catalog-item-content">
                 <div class="catalog-item-image">
                   <img src="img/item-4.jpg" width="360" height="380" alt="Селфи палка «Следуй за мной»">
+                  <div class="catalog-item-actions">
+                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
+                  </div>
                 </div>
                 <div class="catalog-item-description">
                   <h4>
@@ -215,10 +218,6 @@
                     4 900 руб.
                   </div>
                 </div>
-              </div>
-              <div class="catalog-item-actions">
-                <a class="btn" href="#">В корзину</a>
-                <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
               </div>
             </div>
           </div>
@@ -230,59 +229,53 @@
             <a class="catalog-paginator-next" href="#">Вперед</a>
           </div>
         </div>
-      </div>  
+      </div>
+     </div>
     </main>
-    <footer class="main-footer container">
-      <div class="footer-row">
-        <div class="device-logo">
-          <a href="https://device.ru">
-            <span class="footer-logo logo">Device</span>
-          </a>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="device-logo footer-logo">
+            <a href="https://device.ru"><span class="opacity-active">Device</span></a>
+          </div>
+          <div class="user-block">
+            <a class="login" href="#">Валентин Петухов</a>
+            <a class="exit" href="#">Выйти</a>
+          </div>
+          <div class="compare-block">
+            <a class="compare" href="#">Сравнить</a>
+          </div>
+          <div class="shopping-block">
+            <a class="shopping-cart" href="#">Корзина</a>
+          </div>
         </div>
-        <div class="login-block">
-          <a class="login" href="#">Валентин Петухов</a>
-          <a class="exit" href="#">Выйти</a>
+        <div class="footer-row">
+          <p>г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-nav"> 
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <p>Тел.: +7 (495) 495-95-95</p>
         </div>
-        <div class="compare-block">
-          <a class="compare" href="#">Сравнить</a>
-        </div>
-        <div class="shopping-block">
-          <a class="shopping-cart" href="#">Корзина</a>
-        </div>
-      </div>
-      <div class="footer-row">
-        <p>г. Москва, ул. Строителей, 15</p>
-        <ul class="footer-nav"> 
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Гарантия</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-        <p>Тел.: +7 (495) 495-95-95</p>
-      </div>
-      <div class="footer-row">
-        <div class="footer-line">
-        </div>
-        <div class="social">
-          <a class="social-btn social-btn-fb" href="#">
-            <img src="img/facebook.png" width="39" height="38" alt="fb">
-          </a>
-          <a class="social-btn social-btn-inst" href="#">
-            <img src="img/insta.png" width="39" height="38" alt="insta">
-          </a>
-          <a class="social-btn social-btn-tw" href="#">
-            <img src="img/twitter.png" width="38" height="38" alt="tw">
-          </a>
-        </div>
-        <div class="developer">
-          <a href="https://htmlacademy.ru">
-            <img src="img/htmlacademy.png" width="27" height="34" alt="tw">
-          </a>
+        <div class="footer-row">
+          <div class="footer-line">
+          </div>
+          <div class="social">
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-inst" href="#">
+            </a>
+            <a class="social-btn social-btn-tw" href="#"></a>
+          </div>
+          <div class="developer">
+            <a class="developer-btn" href="https://htmlacademy.ru"></a>
+          </div>
         </div>
       </div>
     </footer>
