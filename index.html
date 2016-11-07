@@ -4,63 +4,72 @@
     <meta charset="utf-8">
     <title>Девайс</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
-    <header class="main-header container">
-      <div class="device-logo">
-        Device
+    <header class="main-header">
+      <div class="container">
+        <div class="device-logo">
+          Device
+        </div>
+        <div class="user-block">
+          <form class="search-block" action="https://device.ru" method="post">
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <button class="search-btn" type="submit" id="search-btn" hidden="hidden"><span class="opacity-active">Найти</span></button>
+          </form>
+          <div class="login-block">
+            <a class="login" href="#">Войти</a>
+          </div>
+          <div class="compare-block">
+            <a class="compare" href="#">Сравнить</a>
+          </div>
+          <div class="cart-block">
+            <a class="cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item">
+              <a href="#">Каталог товаров</a>
+              <div class="sub-menu">
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+              </div>
+            </li>  
+            <li class="main-nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>  
+        </nav>
       </div>
-      <div class="user-block">
-        <form class="search-block" action="https://device.ru" method="post">
-          <input class="search-text" type="text" name="search" placeholder="Поиск по сайту">
-          <input class="search-btn" type="submit" value="Найти">
-        </form>
-        <div class="login-block">
-          <a class="login" href="#">Войти</a>
-        </div>
-        <div class="compare-block">
-          <a class="compare" href="#">Сравнить</a>
-        </div>
-        <div class="shopping-block">
-          <a class="shopping-cart" href="#">Корзина</a>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="main-nav-item">
-            <a href="#">Каталог товаров</a>
-            <ul class="sub-nav-list">
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Умные часы</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>  
-          <li class="main-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="main-nav-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="main-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>  
-      </nav>
     </header>
     <main>
       <div class="slider">
@@ -138,21 +147,21 @@
         </div>
       </div>
       <div class="catalog-preview">
-        <div class="catalog-preview-display container">
+        <div class="container">
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-1.png" width="97" height="55">
+                <img class="opacity-active" src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность">
               </div>
               <div class="catalog-preview-item-name">
-               Виртуальная реальность
+                Виртуальная реальность
               </div>
             </a>
           </div>
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-2.png" width="86" height="117">
+                <img class="monopod opacity-active" src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи">
               </div>
               <div class="catalog-preview-item-name">
                 Моноподы для селфи
@@ -162,7 +171,7 @@
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-3.png" width="71" height="87">
+                <img class="opacity-active" src="img/popular-3.png" width="71" height="87" alt="Экшн-камеры">
               </div>
               <div class="catalog-preview-item-name">
                 Экшн-камеры
@@ -172,7 +181,7 @@
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-4.png" width="107" height="65">
+                <img class="opacity-active" src="img/popular-4.png" width="107" height="65" alt="Фитнесс браслеты">
               </div>
               <div class="catalog-preview-item-name">
                 Фитнесс браслеты
@@ -182,7 +191,7 @@
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-5.png" width="56" height="98">
+                <img class="opacity-active" src="img/popular-5.png" width="56" height="98" alt="Умные часы">
               </div>
               <div class="catalog-preview-item-name">
                 Умные часы
@@ -192,7 +201,7 @@
           <div class="catalog-preview-item">
             <a class="catalog-preview-link" href="#">
               <div class="catalog-preview-item-logo">
-              <img class="opacity-active" src="img/popular-6.png" width="132" height="69">
+                <img class="opacity-active" src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры">
               </div>
               <div class="catalog-preview-item-name">
                 Квадрокоптеры
@@ -208,57 +217,71 @@
               <input class="services-tabs-item-input" type="radio" name="tabs" id="tab-1" checked>
               <label class="btn-tab btn" for="tab-1">Доставка</label>
               <div class="services-tabs-content">
-                <h2>Доставка</h2>
-                <p>Мы с удовольствием доставим товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо  заработаем, поднимая его на ваш этаж</p>
+                <div class="services-tabs-description">
+                  <h2>Доставка</h2>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо  заработаем, поднимая его на ваш этаж.</p>
+                  <div class="services-background-image-delivery">
+                  </div>
+                </div>
               </div>
             </li>
             <li class="services-tabs-item">
               <input class="services-tabs-item-input" type="radio" name="tabs" id="tab-2">
               <label class="btn-tab btn" for="tab-2">Гарантия</label>
               <div class="services-tabs-content">
-                <h2>Гарантия</h2>
-                <p> Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам   новый. Товар, не дом, конечно же.</p>
+                <div class="services-tabs-description">
+                  <h2>Гарантия</h2>
+                  <p> Если из-за возгарания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам   новый. Товар, не дом, конечно же.</p>
+                  <div class="services-background-image-warranty">
+                  </div>
+                </div>
               </div>
             </li>
             <li class="services-tabs-item">
               <input class="services-tabs-item-input" type="radio" name="tabs" id="tab-3">
               <label class="btn-tab btn" for="tab-3">Кредит</label>
               <div class="services-tabs-content">
-                <h2>Кредит</h2>
-                <p> Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные   условия кредита. Выгодные для нашего банка, разумеется.</p>
+                <div class="services-tabs-description">
+                  <h2>Кредит</h2>
+                  <p> Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные   условия кредита. Выгодные для нашего банка, разумеется.</p>
+                  <div class="services-background-image-credit">
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
       <div class="producers">
-        <div class="producers-display container">
-          <div class="producers-item">
-            <a class="producers-link" href="#"> 
-            </a>
-          </div>
-          <div class="producers-item">
-            <a class="producers-link" href="#">
-            </a>
-          </div>
-          <div class="producers-item">
-            <a class="producers-link" href="#">
-            </a>
-          </div>
-          <div class="producers-item">
-            <a class="producers-link" href="#"> 
-            </a>
+        <div class="container">
+          <div class="producers-display container">
+            <div class="producers-item">
+              <a class="producers-link" href="#"> 
+              </a>
+            </div>
+            <div class="producers-item">
+              <a class="producers-link" href="#">
+              </a>
+            </div>
+            <div class="producers-item">
+              <a class="producers-link" href="#">
+              </a>
+            </div>
+            <div class="producers-item">
+              <a class="producers-link" href="#"> 
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <div class="information">
-        <div class="information-display container">
+        <div class="container">
           <div class="seo-block">
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными   компаниями:</p>
             <ul>
-              <li>Деловые линии</li>
+              <li>Деловые Линии</li>
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
@@ -268,6 +291,7 @@
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность  покупки. Всякое бывает</p>
             <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749418466!2d37.52742931602769!3d55.68703400452987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478506849972" width="560" height="222" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
             <a class="btn" href="#"><span class="opacity-active">Напишите нам</span></a>
           </div>
@@ -276,31 +300,31 @@
     </main>
     <footer class="main-footer">
       <div class="container">
+        <div class="footer-logo">
+          <a href="https://device.ru"><span class="opacity-active">Device</span></a>
+        </div>
         <div class="footer-row">
-          <div class="device-logo footer-logo">
-            <a href="https://device.ru"><span class="opacity-active">Device</span></a>
+          <div class="footer-login-block">
+            <a class="footer-login" href="#">Войти</a>
           </div>
-          <div class="user-block">
-            <a class="login" href="#">Войти</a>
+          <div class="footer-compare-block">
+            <a class="footer-compare" href="#">Сравнить</a>
           </div>
-          <div class="compare-block">
-            <a class="compare" href="#">Сравнить</a>
-          </div>
-          <div class="shopping-block">
-            <a class="shopping-cart" href="#">Корзина</a>
+            <div class="footer-cart-block">
+            <a class="footer-cart" href="#">Корзина</a>
           </div>
         </div>
         <div class="footer-row">
           <p>г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav"> 
             <li>
-              <a href="#">Доставка</a>
+              <a href="#"><span class="opacity-active">Доставка</span></a>
             </li>
             <li>
-              <a href="#">Гарантия</a>
+              <a href="#"><span class="opacity-active">Гарантия</span></a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="#"><span class="opacity-active">Контакты</span></a>
             </li>
           </ul>
           <p>Тел.: +7 (495) 495-95-95</p>
@@ -310,8 +334,7 @@
           </div>
           <div class="social">
             <a class="social-btn social-btn-fb" href="#"></a>
-            <a class="social-btn social-btn-inst" href="#">
-            </a>
+            <a class="social-btn social-btn-inst" href="#"></a>
             <a class="social-btn social-btn-tw" href="#"></a>
           </div>
           <div class="developer">
@@ -319,7 +342,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> 
     <div class="popup-container">
       <form class="popup-form"  action="https://device.ru" method="post">
         <label class="popup-form-tag">
@@ -337,6 +360,7 @@
         <input class="btn" type="submit" value="Отправить">
       </form>
       <button type="button">x</button>
-    </div>
+    </div> 
+    <script src="js/script.js"></script>
   </body>
 </html>

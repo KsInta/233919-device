@@ -4,64 +4,73 @@
     <meta charset="utf-8">
     <title>Девайс</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
-    <header class="main-header container">
-      <div class="device-logo">
-        <a href="https://device.ru">Device</a>
+    <header class="main-header">
+      <div class="second-header container">
+        <div class="device-logo">
+          <a href="https://device.ru">Device</a>
+        </div>
+        <div class="user-block">
+          <form class="search-block" action="https://device.ru" method="post">
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
+            <button class="search-btn" type="submit" id="search-btn" hidden="hidden"><span class="opacity-active">Найти</span></button>
+          </form>
+          <div class="second-login-block login-block">
+            <a class="login" href="#">Валентин Петухов</a>
+            <a class="exit" href="#">Выход</a>
+          </div>
+          <div class="compare-block">
+            <a class="compare" href="#">Сравнить</a>
+          </div>
+          <div class="cart-block">
+            <a class="cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item">
+              <a href="#">Каталог товаров</a>
+              <div class="sub-menu">
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Виртуальная реальность</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Моноподы для селфи</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Экшн-камеры</a>
+                </li>
+              </ul>
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Умные часы</a>
+                </li>
+              </ul>
+              <ul class="sub-nav-list">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+              </div>
+            </li>  
+            <li class="main-nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>  
+        </nav>
       </div>
-      <div class="user-block">
-        <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" name="search" placeholder="Поиск по сайту">
-            <input class="search" type="submit" value="Найти">
-        </form>
-        <div class="login-block">
-          <a class="login" href="#">Валентин Петухов</a>
-          <a class="exit" href="#">Выйти</a>
-        </div>
-        <div class="compare-block">
-          <a class="compare" href="#">Сравнить</a>
-        </div>
-        <div class="shopping-block">
-          <a class="shopping-cart" href="#">Корзина</a>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="main-nav-item">
-            <a href="#">Каталог товаров</a>
-            <ul class="sub-nav-list">
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Виртуальная реальность</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Моноподы для селфи</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Экшн-камеры</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Умные часы</a>
-              </li>
-              <li class="sub-nav-item">
-                <a class="sub-nav-link" href="#">Квадрокоптеры</a>
-              </li>
-            </ul>
-          </li>  
-          <li class="main-nav-item">
-            <a href="#">Доставка</a>
-          </li>
-          <li class="main-nav-item">
-            <a href="#">Гарантия</a>
-          </li>
-          <li class="main-nav-item">
-            <a href="#">Контакты</a>
-          </li>
-        </ul>  
-      </nav>
     </header>
     <main>
       <div class="content-header container">
@@ -82,51 +91,51 @@
         <div class="products-area container">
         <div class="filter-form">
           <h3>Фильтр:</h3>
-          <div class="filters-item">
-            <form action="https://device.ru" method="post">
+          <div class="filter-item">
+            <form action="https://device.ru" method="get">
               <div class="fieldset">
                 <h4>Стоимость</h4>
                 <!-- Здесь будет ползунок -->
               </div>
               <div class="fieldset">
                 <h4>Цвет</h4>
-                <ul>
+                <ul class="filter-color">
                   <li>
-                    <input type="checkbox" name="black" id="black">
+                    <input class="input-color" type="checkbox" name="black" id="black">
                     <label for="black">Черный</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="white" id="white">
+                    <input class="input-color" type="checkbox" name="white" id="white">
                     <label for="white">Белый</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="blue" id="blue">
+                    <input class="input-color" type="checkbox" name="blue" id="blue">
                     <label for="blue">Синий</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="red" id="red">
+                    <input class="input-color" type="checkbox" name="red" id="red">
                     <label for="red">Красный</label>
                   </li>
                   <li>
-                    <input type="checkbox" name="purple" id="purple">
+                    <input class="input-color" type="checkbox" name="purple" id="purple">
                     <label for="purple">Розовый</label>
                   </li>
                 </ul>
               </div>
               <div class="fieldset">
                 <h4>Bluetooth</h4>
-                <ul>
+                <ul class="filter-bluetooth">
                   <li>
-                    <input type="radio" name="bluetooth" value="yes" id="bluetooth-yes">
+                    <input class="input-bluetooth" type="radio" name="bluetooth" value="yes" id="bluetooth-yes">
                     <label for="bluetooth-yes">Есть</label>
                   </li>
                   <li>
-                    <input type="radio" name="bluetooth" value="no" id="bluetooth-no">
+                    <input class="input-bluetooth" type="radio" name="bluetooth" value="no" id="bluetooth-no">
                     <label for="bluetooth-no">Нет</label>
                   </li>
                 </ul>
               </div>
-              <button class="btn search-btn" type="submit" name="filter-button">Показать</button>
+              <button class="btn" type="submit" name="filter-button"><span class="opacity-active"> Показать</span></button>
             </form>
           </div>
         </div>
@@ -134,13 +143,13 @@
           <div class="sorting">
             <h3>Сортировка:</h3>
             <div class="sorting-item">
-              <a class="sorting-link">По цене</a>
+              <a class="sorting-link" href="#">По цене</a>
               <a class="sorting-link" href="#">По типу</a>  
               <a class="sorting-link" href="#">По популярности</a>
             </div>
             <div class="sorting-arrow">
-              <a class="sorting-arrow-up" href="">Вверх</a>
-              <a class="sorting-arrow-down" href="">Вниз</a>
+              <a class="arrow sorting-arrow-up" href="#"></a>
+              <a class="arrow sorting-arrow-down" href="#"></a>
             </div>  
           </div>
           <div class="catalog-list">
@@ -174,7 +183,7 @@
                 </div>
                 <div class="catalog-item-description">
                   <h4>
-                    <a class="catalog-item-link" href="#">Профессиональная селфи-палка</a>
+                    <a class="catalog-item-link" href="#">Профессиональная<br> селфи-палка</a>
                   </h4>
                   <div class="catalog-item-price">
                     1 500 руб.
@@ -222,11 +231,11 @@
             </div>
           </div>
           <div class="catalog-paginator">
-            <a class="catalog-paginator-prev" href="#">Назад</a>
+            <a class="catalog-paginator-prev" href="#"><span class="opacity-active">Назад</span></a>
             <a>1</a>
             <a href="#">2</a>
             <a href="#">3</a>
-            <a class="catalog-paginator-next" href="#">Вперед</a>
+            <a class="catalog-paginator-next" href="#"><span class="opacity-active">Вперед</span></a>
           </div>
         </div>
       </div>
@@ -234,32 +243,32 @@
     </main>
     <footer class="main-footer">
       <div class="container">
+        <div class="footer-logo">
+          <a href="https://device.ru"><span class="opacity-active">Device</span></a>
+        </div>
         <div class="footer-row">
-          <div class="device-logo footer-logo">
-            <a href="https://device.ru"><span class="opacity-active">Device</span></a>
+          <div class="footer-login-block">
+            <a class="footer-login" href="#">Валентин Петухов</a>
+            <a class="exit" href="#">Выход</a>
           </div>
-          <div class="user-block">
-            <a class="login" href="#">Валентин Петухов</a>
-            <a class="exit" href="#">Выйти</a>
+          <div class="footer-compare-block">
+            <a class="footer-compare" href="#">Сравнить</a>
           </div>
-          <div class="compare-block">
-            <a class="compare" href="#">Сравнить</a>
-          </div>
-          <div class="shopping-block">
-            <a class="shopping-cart" href="#">Корзина</a>
+            <div class="footer-cart-block">
+            <a class="footer-cart" href="#">Корзина</a>
           </div>
         </div>
         <div class="footer-row">
           <p>г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav"> 
             <li>
-              <a href="#">Доставка</a>
+              <a href="#"><span class="opacity-active">Доставка</span></a>
             </li>
             <li>
-              <a href="#">Гарантия</a>
+              <a href="#"><span class="opacity-active">Гарантия</span></a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="#"><span class="opacity-active">Контакты</span></a>
             </li>
           </ul>
           <p>Тел.: +7 (495) 495-95-95</p>
@@ -269,8 +278,7 @@
           </div>
           <div class="social">
             <a class="social-btn social-btn-fb" href="#"></a>
-            <a class="social-btn social-btn-inst" href="#">
-            </a>
+            <a class="social-btn social-btn-inst" href="#"></a>
             <a class="social-btn social-btn-tw" href="#"></a>
           </div>
           <div class="developer">
@@ -279,6 +287,7 @@
         </div>
       </div>
     </footer>
+   <script src="js/script.js"></script> 
   </body>
 </html>
         
