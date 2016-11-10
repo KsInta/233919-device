@@ -2,20 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Девайс</title>
+    <title>Девайс каталог</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <header class="main-header">
       <div class="second-header container">
-        <div class="device-logo">
-          <a href="https://device.ru">Device</a>
+        <div class="header-logo">
+          <a href="index.html">Device</a>
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" onkeyup="checkParams();" id="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
-            <button class="search-btn" type="submit" id="search-btn" hidden="hidden"><span class="opacity-active">Найти</span></button>
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <button class="search-btn" type="submit" id="search-btn">Найти</button>
+            <label class="search-label" for="search-id"></label>
           </form>
           <div class="second-login-block login-block">
             <a class="login" href="#">Валентин Петухов</a>
@@ -30,7 +31,7 @@
         </div>
         <nav class="main-nav">
           <ul class="main-nav-list">
-            <li class="main-nav-item">
+            <li class="main-nav-item sub-menu-display">
               <a href="#">Каталог товаров</a>
               <div class="sub-menu">
               <ul class="sub-nav-list">
@@ -74,24 +75,39 @@
     </header>
     <main>
       <div class="content-header container">
-        <h2>Моноподы для селфи</h2>
+        <h1>Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Главная</a>
+            <a class="breadcrumbs-link breadcrumbs-arrow" href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs-item ">
+            <a class="breadcrumbs-link breadcrumbs-arrow" href="#">Каталог товаров</a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Каталог товаров</a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Моноподы для селфи</a>
+            <a class="breadcrumbs-link active">Моноподы для селфи</a>
           </li>  
         </ul>
       </div>
-      <div class="products-area">
-        <div class="products-area container">
-        <div class="filter-form">
+      <div class="products-area-top">
+        <div class="catalog-wrapper-top">
           <h3>Фильтр:</h3>
-          <div class="filter-item">
+          <div class="sorting">
+            <h3>Сортировка:</h3>
+            <div class="sorting-item">
+              <a class="sorting-link active">По цене</a>
+              <a class="sorting-link" href="#">По типу</a>  
+              <a class="sorting-link" href="#">По популярности</a>
+            </div>
+            <div class="sorting-arrow">
+              <a class="arrow sorting-arrow-up" href="#"></a>
+              <a class="arrow sorting-arrow-down active" href="#"></a>
+            </div>  
+          </div>
+        </div>
+      </div>
+      <div class="products-area-bottom">
+        <div class="catalog-wrapper-bottom">
+          <div class="filter-form">
             <form action="https://device.ru" method="get">
               <div class="fieldset">
                 <h4>Стоимость</h4>
@@ -138,27 +154,16 @@
               <button class="btn" type="submit" name="filter-button"><span class="opacity-active"> Показать</span></button>
             </form>
           </div>
-        </div>
+        
         <div class="catalog">
-          <div class="sorting">
-            <h3>Сортировка:</h3>
-            <div class="sorting-item">
-              <a class="sorting-link" href="#">По цене</a>
-              <a class="sorting-link" href="#">По типу</a>  
-              <a class="sorting-link" href="#">По популярности</a>
-            </div>
-            <div class="sorting-arrow">
-              <a class="arrow sorting-arrow-up" href="#"></a>
-              <a class="arrow sorting-arrow-down" href="#"></a>
-            </div>  
-          </div>
+          
           <div class="catalog-list">
             <div class="catalog-item">
               <div class="catalog-item-content">
                 <div class="catalog-item-image">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                   <div class="catalog-item-actions">
-                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="btn" href="#">В корзину</a>
                     <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
                   </div>
                 </div>
@@ -177,7 +182,7 @@
                 <div class="catalog-item-image">
                   <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                   <div class="catalog-item-actions">
-                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="btn" href="#">В корзину</a>
                     <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
                   </div>
                 </div>
@@ -196,7 +201,7 @@
                 <div class="catalog-item-image">
                   <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                   <div class="catalog-item-actions">
-                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="btn" href="#">В корзину</a>
                     <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
                   </div>
                 </div>  
@@ -215,7 +220,7 @@
                 <div class="catalog-item-image">
                   <img src="img/item-4.jpg" width="360" height="380" alt="Селфи палка «Следуй за мной»">
                   <div class="catalog-item-actions">
-                    <a class="btn" href="#"><span class="opacity-active">В корзину</span></a>
+                    <a class="btn" href="#">В корзину</a>
                     <a class="catalog-item-actions-link" href="#">Добавить к сравнению</a>
                   </div>
                 </div>
@@ -231,22 +236,23 @@
             </div>
           </div>
           <div class="catalog-paginator">
-            <a class="catalog-paginator-prev" href="#"><span class="opacity-active">Назад</span></a>
-            <a>1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a class="catalog-paginator-next" href="#"><span class="opacity-active">Вперед</span></a>
+            <a class="catalog-paginator-prev" href="#">Назад</a>
+            <a class="catalog-paginator-link active">1</a>
+            <a class="catalog-paginator-link" href="#">2</a>
+            <a class="catalog-paginator-link" href="#">3</a>
+            <a class="catalog-paginator-next" href="#">Вперед</a>
           </div>
         </div>
       </div>
-     </div>
+    </div>
     </main>
     <footer class="main-footer">
       <div class="container">
-        <div class="footer-logo">
-          <a href="https://device.ru"><span class="opacity-active">Device</span></a>
-        </div>
+        
         <div class="footer-row">
+          <div class="footer-logo">
+            <a href="index.html">Device</a>
+          </div>
           <div class="footer-login-block">
             <a class="footer-login" href="#">Валентин Петухов</a>
             <a class="exit" href="#">Выход</a>
@@ -262,13 +268,13 @@
           <p>г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav"> 
             <li>
-              <a href="#"><span class="opacity-active">Доставка</span></a>
+              <a href="#">Доставка</a>
             </li>
             <li>
-              <a href="#"><span class="opacity-active">Гарантия</span></a>
+              <a href="#">Гарантия</a>
             </li>
             <li>
-              <a href="#"><span class="opacity-active">Контакты</span></a>
+              <a href="#">Контакты</a>
             </li>
           </ul>
           <p>Тел.: +7 (495) 495-95-95</p>

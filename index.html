@@ -3,19 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <header class="main-header">
       <div class="container">
-        <div class="device-logo">
+        <div class="header-logo">
           Device
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" onkeyup="checkParams();" id="search" name="search" placeholder="Поиск по сайту" autocomplete="off">
-            <button class="search-btn" type="submit" id="search-btn" hidden="hidden"><span class="opacity-active">Найти</span></button>
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <button class="search-btn" type="submit" id="search-btn">Найти</button>
+            <label class="search-label" for="search-id"></label>
           </form>
           <div class="login-block">
             <a class="login" href="#">Войти</a>
@@ -29,7 +30,7 @@
         </div>
         <nav class="main-nav">
           <ul class="main-nav-list">
-            <li class="main-nav-item">
+            <li class="main-nav-item sub-menu-display">
               <a href="#">Каталог товаров</a>
               <div class="sub-menu">
               <ul class="sub-nav-list">
@@ -84,13 +85,13 @@
           </div>
           <div class="slider-card">
             <div class="slider-card-item-first">
-              <div class="slider-foto">
-                <img class="slider-foto-first" src="img/slider-1.png" width="384" height="486" alt="Палка для сефли 8-метровая">
+              <div class="slider-photo">
+                  <img class="slider-photo-first" src="img/slider-11.png" width="526" height="486" alt="Палка для сефли 8-метровая">
               </div>
               <div class="slider-description">
-                <h2 class="slider-title-first">Делай селфи,<br> как Бен Стиллер!</h2>
+                <div class="slider-title">Делай селфи,<br> как Бен Стиллер!</div>
                 <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-                <a class="slider-link btn" href="#"><span class="opacity-active">Подробнее</span></a>
+                <a class="slider-link btn" href="#">Подробнее</a>
                 <div class="slider-characteristics">
                   <div class="slider-characteristics-item">
                     <span>8,5 м</span>
@@ -108,13 +109,13 @@
               </div>
             </div>
             <div class="slider-card-item-second">
-              <div class="slider-foto">
-                <img class="slider-foto-second" src="img/slider-2.png" width="345" height="485" alt="Фитнесс-браслет">
+              <div class="slider-photo">
+                <img class="slider-photo-second" src="img/slider-22.png" width="526" height="486" alt="Фитнесс-браслет">
               </div>
               <div class="slider-description">
-                <h2 class="slider-title-second">Худеем<br> правильно</h2>
-                <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету</p>
-                <a class="slider-link btn" href="#"><span class="opacity-active">Подробнее</span></a>
+                <div class="slider-title">Худеем<br> правильно!</div>
+                <p>Мотивирующие фитнесс-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету</p>
+                <a class="slider-link btn" href="#">Подробнее</a>
                 <div class="slider-characteristics">
                   <div class="slider-characteristics-item">
                     <span>48 часов</span>
@@ -124,13 +125,13 @@
               </div>
             </div>
             <div class="slider-card-item-third">
-              <div class="slider-foto">
-                <img class="slider-foto-third" src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+              <div class="slider-photo">
+                  <img class="slider-photo-third" src="img/slider-33.png" width="526" height="486" alt="Квадрокоптер">
               </div>
               <div class="slider-description">
-                <h2 class="slider-title-third">Порхает как бабочка, жалит как пчела</h2>
+                <div class="slider-title">Порхает как бабочка, жалит как пчела!</div>
                 <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                <a class="slider-link btn" href="#"><span class="opacity-active">Подробнее</span></a>
+                <a class="slider-link btn" href="#">Подробнее</a>
                 <div class="slider-characteristics">
                   <div class="slider-characteristics-item">
                     <span>800 м</span>
@@ -149,64 +150,64 @@
       <div class="catalog-preview">
         <div class="container">
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="opacity-active" src="img/popular-1.png" width="97" height="55" alt="Виртуальная реальность">
-              </div>
-              <div class="catalog-preview-item-name">
-                Виртуальная реальность
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-1.png" width="160" height="160" alt="Виртуальная реальность">
+              </a>
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Виртуальная реальность</a>
+            </div>
           </div>
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="monopod opacity-active" src="img/popular-2.png" width="86" height="117" alt="Моноподы для селфи">
-              </div>
-              <div class="catalog-preview-item-name">
-                Моноподы для селфи
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-2.png" width="160" height="160" alt="Моноподы для селфи">
+              </a>       
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Моноподы для селфи</a>
+            </div>
           </div>
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="opacity-active" src="img/popular-3.png" width="71" height="87" alt="Экшн-камеры">
-              </div>
-              <div class="catalog-preview-item-name">
-                Экшн-камеры
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-3.png" width="160" height="160" alt="Экшн-камеры">
+              </a>
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Экшн-камеры</a>
+            </div>
           </div>
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="opacity-active" src="img/popular-4.png" width="107" height="65" alt="Фитнесс браслеты">
-              </div>
-              <div class="catalog-preview-item-name">
-                Фитнесс браслеты
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-4.png" width="160" height="160" alt="Фитнесс браслеты">
+              </a>
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Фитнесс браслеты</a>
+            </div>
           </div>
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="opacity-active" src="img/popular-5.png" width="56" height="98" alt="Умные часы">
-              </div>
-              <div class="catalog-preview-item-name">
-                Умные часы
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-5.png" width="160" height="160" alt="Умные часы">
+              </a>
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Умные часы</a>
+            </div>
           </div>
           <div class="catalog-preview-item">
-            <a class="catalog-preview-link" href="#">
-              <div class="catalog-preview-item-logo">
-                <img class="opacity-active" src="img/popular-6.png" width="132" height="69" alt="Квадрокоптеры">
-              </div>
-              <div class="catalog-preview-item-name">
-                Квадрокоптеры
-              </div>
-            </a>
+            <div class="catalog-preview-item-logo">
+              <a class="catalog-preview-link" href="#">
+                <img src="img/popular-6.png" width="160" height="160" alt="Квадрокоптеры">
+              </a>
+            </div>
+            <div class="catalog-preview-item-name">
+              <a class="catalog-preview-link" href="#">Квадрокоптеры</a>
+            </div>
           </div>
         </div>
       </div>
@@ -254,23 +255,21 @@
       </div>
       <div class="producers">
         <div class="container">
-          <div class="producers-display container">
-            <div class="producers-item">
-              <a class="producers-link" href="#"> 
-              </a>
-            </div>
-            <div class="producers-item">
-              <a class="producers-link" href="#">
-              </a>
-            </div>
-            <div class="producers-item">
-              <a class="producers-link" href="#">
-              </a>
-            </div>
-            <div class="producers-item">
-              <a class="producers-link" href="#"> 
-              </a>
-            </div>
+          <div class="producers-item">
+            <a class="producers-link producers-dji" href="#"> 
+            </a>
+          </div>
+          <div class="producers-item">
+            <a class="producers-link producers-sp-gadgets" href="#">
+            </a>
+          </div>
+          <div class="producers-item">
+            <a class="producers-link producers-go-pro" href="#">
+            </a>
+          </div>
+          <div class="producers-item">
+            <a class="producers-link producers-vive" href="#"> 
+            </a>
           </div>
         </div>
       </div>
@@ -285,7 +284,7 @@
               <li>Автотрейдинг</li>
               <li>ЖелДорЭкспедиция</li>
             </ul>
-            <a class="btn" href="#"><span class="opacity-active">Подробнее о нас</span></a>
+            <a class="btn" href="#">Подробнее о нас</a>
           </div>
           <div class="contact">
             <h2>Контакты</h2>
@@ -293,17 +292,17 @@
             <div class="map">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1123749418466!2d37.52742931602769!3d55.68703400452987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478506849972" width="560" height="222" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
-            <a class="btn" href="#"><span class="opacity-active">Напишите нам</span></a>
+            <a class="btn" href="#">Напишите нам</a>
           </div>
         </div>
       </div> 
     </main>
     <footer class="main-footer">
       <div class="container">
-        <div class="footer-logo">
-          <a href="https://device.ru"><span class="opacity-active">Device</span></a>
-        </div>
         <div class="footer-row">
+          <div class="footer-logo">
+            <a href="https://device.ru">Device</a>
+          </div>
           <div class="footer-login-block">
             <a class="footer-login" href="#">Войти</a>
           </div>
@@ -318,13 +317,13 @@
           <p>г. Москва, ул. Строителей, 15</p>
           <ul class="footer-nav"> 
             <li>
-              <a href="#"><span class="opacity-active">Доставка</span></a>
+              <a href="#">Доставка</a>
             </li>
             <li>
-              <a href="#"><span class="opacity-active">Гарантия</span></a>
+              <a href="#">Гарантия</a>
             </li>
             <li>
-              <a href="#"><span class="opacity-active">Контакты</span></a>
+              <a href="#">Контакты</a>
             </li>
           </ul>
           <p>Тел.: +7 (495) 495-95-95</p>
@@ -345,21 +344,22 @@
     </footer> 
     <div class="popup-container">
       <form class="popup-form"  action="https://device.ru" method="post">
-        <label class="popup-form-tag">
-          <input class="popup-form-item" type="text" name="user-name" placeholder="Представьтесь, пожалуйста"> 
-          Ваше имя:
-        </label>
-        <label class="popup-form-tag">
-          <input class="popup-form-item" type="text" name="email" placeholder="Для отправки ответа"> 
-          Ваш e-mail:
-        </label>
-        <label>
-          <textarea name="message-text" placeholder="В свободной форме"></textarea> 
-          Текст письма:
-        </label>
-        <input class="btn" type="submit" value="Отправить">
+        <div class="user-name">
+          <label class="popup-form-tag" for="user-name">Ваше имя:</label>
+          <input class="popup-form-item" type="text" name="user-name" id="user-name" placeholder="Представьтесь, пожалуйста"> 
+        </div>
+        <div class="user-email">
+          <label class="popup-form-tag" for="user-email">Ваш e-mail:</label>
+          <input class="popup-form-item" type="text" name="email" id="user-email" placeholder="Для отправки ответа"> 
+        </div> 
+        <div class="message-text">
+          <label class="popup-form-tag" for="message-text">Текст письма:</label>
+          <textarea name="message-text" placeholder="В свободной форме" id="message-text"></textarea> 
+          
+        </div>
+        <button class="btn" type="submit">Отправить</button>
       </form>
-      <button type="button">x</button>
+      
     </div> 
     <script src="js/script.js"></script>
   </body>
