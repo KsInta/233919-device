@@ -1,6 +1,4 @@
 body {
-  margin-left: auto;
-  margin-right: auto;
   font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -134,7 +132,7 @@ button.btn:active {
   width: 1040px; 
   min-height: 145px;
   margin-top: 40px;
-  
+  margin-bottom: -10px;
   padding-top: 43px; 
   padding-left: 60px;
   padding-right: 60px;
@@ -368,7 +366,7 @@ button.btn:active {
 .main-nav-item {
   -ms-flex-positive: 1;
   flex-grow: 1;
-  text-align: right
+  text-align: right;
 }
 
 .main-nav-item:nth-child(1) {
@@ -430,10 +428,12 @@ button.btn:active {
   display: none;
   margin-right: 15px;
   padding-left: 0;
+  
+  height: 161px;
 }
 
 .sub-nav-list:first-child {
-  margin-left: 40px;
+  margin-left: 59px;
 }
 
 .sub-nav-item {
@@ -452,8 +452,9 @@ button.btn:active {
   position: absolute;
   z-index: 5;
   display: flex;
-  width: 700px;
-  margin-left: -40px;
+  width: 1160px;;
+  margin-left: -59px;
+  background-color: #f7e296;
 }
 
 .sub-menu-display:hover .sub-nav-list {
@@ -468,14 +469,12 @@ button.btn:active {
 
 /*Слайдер*/
 .slider {
-  
-  margin-top: -10px;
   margin-bottom: 87px;
 }
 
 .slider > .container {
   position: relative;
-  min-height: 500px;
+  height: 500px;
 }
 
 .slider input {
@@ -566,7 +565,7 @@ button.btn:active {
 }
 
 .slider-description p {
-  width: 500px;
+  width: 503px;
   margin-bottom: 43px;
 }
 
@@ -597,7 +596,7 @@ button.btn:active {
 
 .slider-toggles {
   position: absolute;
-  bottom: 149px;
+  top: 320px;
   right: 102px;
 }
 
@@ -699,7 +698,7 @@ button.btn:active {
 
 .services-tabs-description {
   position: relative;
-  width: 450px;
+  width: 440px;
   letter-spacing: -0.001em;
 }
 
@@ -1188,6 +1187,11 @@ button.btn:active {
   animation-duration: 1s;
 }
 
+.popup-map-display.popup-map-no-js {
+  position: relative;
+  margin: 100px auto;
+}
+
 .popup-container {
   position: fixed;
   top: 0;
@@ -1260,7 +1264,6 @@ button.btn:active {
   outline-color: transparent;
 }
 
-
 .popup-container label {
   display: block;
   margin-bottom: 5px;
@@ -1286,6 +1289,10 @@ button.btn:active {
   animation-duration: 1s;
 }
 
+.popup-container-display.popup-no-js {
+  position: relative;
+  margin: 100px auto;
+}
 
 @keyframes bounce {
   0% {
@@ -1304,7 +1311,7 @@ button.btn:active {
   z-index: 10;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
 }
 
 .popup-overlay-display {
@@ -1597,6 +1604,7 @@ button.btn:active {
   color: inherit;
   border: none;
   background-color: #efefef;
+  outline-color: transparent;
 }
 
 .filter-color input,

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="second-header container">
+        <div class="header-logo">
+          Device
+        </div>
+        <div class="user-block">
+          <form class="search-block" action="https://device.ru" method="post">
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <button class="search-btn" type="submit" id="search-btn">Найти</button>
+            <label class="search-label" for="search-id"></label>
+          </form>
+          <div class="login-block">
+            <a class="login" href="#">Войти</a>
+          </div>
+          <div class="compare-block">
+            <a class="compare" href="#">Сравнить</a>
+          </div>
+          <div class="cart-block">
+            <a class="cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item sub-menu-display">
+              <a href="#">Каталог товаров</a>
+              <div class="sub-menu">
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
+            </li>  
+            <li class="main-nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="popup-map popup-map-display popup-map-no-js">
+        <button class="popup-container-close" type="button" title="Закрыть">Закрыть</button>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779985!2d37.527429316262506!3d55.6870309805358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1478865399567" width="960" height="560" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-logo">
+            <a href="https://device.ru">Device</a>
+          </div>
+          <div class="footer-login-block">
+            <a class="footer-login" href="#">Войти</a>
+          </div>
+          <div class="footer-compare-block">
+            <a class="footer-compare" href="#">Сравнить</a>
+          </div>
+            <div class="footer-cart-block">
+            <a class="footer-cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <div class="footer-row">
+          <p>г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-nav"> 
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <p>Тел.: +7 (495) 495-95-95</p>
+        </div>
+        <div class="footer-row">
+          <div class="footer-line">
+          </div>
+          <div class="social">
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-inst" href="#"></a>
+            <a class="social-btn social-btn-tw" href="#"></a>
+          </div>
+          <div class="developer">
+            <a class="developer-btn" href="https://htmlacademy.ru"></a>
+          </div>
+        </div>
+      </div>
+    </footer> 
+  </body>

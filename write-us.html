@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="second-header container">
+        <div class="header-logo">
+          Device
+        </div>
+        <div class="user-block">
+          <form class="search-block" action="https://device.ru" method="post">
+            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <button class="search-btn" type="submit" id="search-btn">Найти</button>
+            <label class="search-label" for="search-id"></label>
+          </form>
+          <div class="login-block">
+            <a class="login" href="#">Войти</a>
+          </div>
+          <div class="compare-block">
+            <a class="compare" href="#">Сравнить</a>
+          </div>
+          <div class="cart-block">
+            <a class="cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li class="main-nav-item sub-menu-display">
+              <a href="#">Каталог товаров</a>
+              <div class="sub-menu">
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Фитнесс-браслеты</a>
+                  </li>
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="sub-nav-list">
+                  <li class="sub-nav-item">
+                    <a class="sub-nav-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
+            </li>  
+            <li class="main-nav-item">
+              <a href="#">Доставка</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Гарантия</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>  
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="popup-container popup-container-display popup-no-js">
+        <button class="popup-container-close" type="button" title="Закрыть">Закрыть</button>
+        <form class="popup-form" action="https://device.ru" method="post">
+          <div class="user-name">
+            <label class="popup-form-tag" for="user-name">Ваше имя:</label>
+            <input class="popup-form-item" type="text" name="user-name" id="user-name" placeholder="Представьтесь, пожалуйста"> 
+          </div>
+          <div class="user-email">
+            <label class="popup-form-tag" for="user-email">Ваш e-mail:</label>
+            <input class="popup-form-item" type="text" name="email" id="user-email" placeholder="Для отправки ответа"> 
+          </div> 
+          <div class="message-text">
+            <label class="popup-form-tag" for="message-text">Текст письма:</label>
+            <textarea name="message-text" placeholder="В свободной форме" id="message-text"></textarea> 
+          </div>
+          <button class="btn" type="submit">Отправить</button>
+      </form>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-logo">
+            <a href="https://device.ru">Device</a>
+          </div>
+          <div class="footer-login-block">
+            <a class="footer-login" href="#">Войти</a>
+          </div>
+          <div class="footer-compare-block">
+            <a class="footer-compare" href="#">Сравнить</a>
+          </div>
+            <div class="footer-cart-block">
+            <a class="footer-cart" href="#">Корзина</a>
+          </div>
+        </div>
+        <div class="footer-row">
+          <p>г. Москва, ул. Строителей, 15</p>
+          <ul class="footer-nav"> 
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Гарантия</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+          <p>Тел.: +7 (495) 495-95-95</p>
+        </div>
+        <div class="footer-row">
+          <div class="footer-line">
+          </div>
+          <div class="social">
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-inst" href="#"></a>
+            <a class="social-btn social-btn-tw" href="#"></a>
+          </div>
+          <div class="developer">
+            <a class="developer-btn" href="https://htmlacademy.ru"></a>
+          </div>
+        </div>
+      </div>
+    </footer> 
+  </body>
