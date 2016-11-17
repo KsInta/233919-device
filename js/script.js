@@ -9,8 +9,6 @@ var username = popup.querySelector("[name=user-name]");
 var email = popup.querySelector("[name=email]");
 var message = popup.querySelector("[name=message-text]");
 
-var storage = localStorage.getItem("username");
-
 var map = document.querySelector (".map");
 var popupmap = document.querySelector (".popup-map");
 var mapclose = popupmap.querySelector (".popup-container-close");
@@ -20,13 +18,7 @@ letter.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("popup-container-display");
   overlay.classList.add("popup-overlay-display");
-    
-  if (storage) {
-    username.value = storage;
-    email.focus();
-  } else {
-    username.focus();
-  }
+  username.focus();
 });
 
 close.addEventListener("click", function(event) {
@@ -45,9 +37,7 @@ overlay.addEventListener("click", function(event) {
 form.addEventListener("submit", function(event) {
   if (!username.value || !email.value || !message.value) {
     event.preventDefault();
-  } else {
-    localStorage.setItem("username", username.value);
-  }
+  } 
 });
 
 window.addEventListener("keydown", function(event) {

@@ -132,16 +132,17 @@ button.btn:active {
   width: 1040px; 
   min-height: 145px;
   margin-top: 40px;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
   padding-top: 43px; 
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
   background-color: #f7e296;
-  box-shadow: 0 112px 0 0 #f7e296;
+  box-shadow: 0 147px 0 -40px #f7e296, inset 40px 0 0 0 white, inset -40px 0 0 0 white;
 }
 
 .main-header > .second-header.container {
-  box-shadow: none;
+  margin-bottom: 10px;
+  box-shadow: inset 40px 0 0 0 white, inset -40px 0 0 0 white;
 }
 
 .user-block {
@@ -428,12 +429,11 @@ button.btn:active {
   display: none;
   margin-right: 15px;
   padding-left: 0;
-  
-  height: 161px;
+  height: 156px;
 }
 
 .sub-nav-list:first-child {
-  margin-left: 59px;
+  margin-left: 60px;
 }
 
 .sub-nav-item {
@@ -452,7 +452,7 @@ button.btn:active {
   position: absolute;
   z-index: 5;
   display: flex;
-  width: 1160px;;
+  width: 1159px;;
   margin-left: -59px;
   background-color: #f7e296;
 }
@@ -654,7 +654,7 @@ button.btn:active {
 
 .catalog-preview-item-name {
   display: inline-block;
-  width: 126px;
+  width: 127px;
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -707,12 +707,17 @@ button.btn:active {
   letter-spacing: 0.03em;
 }
 
+.services-tabs-description p {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
 .services-background-image-delivery,
 .services-background-image-warranty,
 .services-background-image-credit {
   position: absolute;
   top: -15px;
-  right: -262px;
+  right: -270px;
   width: 171px;
   height: 195px;
   background-position: bottom;
@@ -816,7 +821,7 @@ button.btn:active {
 }
 
 .seo-block p {
-  width: 465px;
+  width: 468px;
   margin-bottom: 30px;
   letter-spacing: -0.015em;
 }
@@ -1220,8 +1225,12 @@ button.btn:active {
   font-size: 0;
   border-radius: 50%;
   border: none;
-  background-color: #f7e296;
+  background-color: rgba(240, 197, 46, 0.5);;
   cursor: pointer;
+}
+
+.popup-container-close:hover {
+  background-color: rgba(240, 197, 46, 1);
 }
 
 .popup-container-close::before,
@@ -1231,7 +1240,7 @@ button.btn:active {
   right: 12px;
   width: 30px;
   height: 2px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .popup-container-close::before {
@@ -1240,6 +1249,11 @@ button.btn:active {
 
 .popup-container-close::after {
   transform: rotate(-45deg);
+}
+
+.popup-container-close:active::before,
+.popup-container-close:active::after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .user-name,
@@ -1259,9 +1273,65 @@ button.btn:active {
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
-  background-color: #f2f2f2;
+  background-color: rgba(242, 242, 242, 0.5);
   border: none;
   outline-color: transparent;
+}
+
+.popup-container input:hover,
+.popup-container textarea:hover {
+  background-color: rgba(234, 234, 234, 0.8);
+}
+
+.popup-container input:focus {
+  width: 334px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 3px solid rgba(229, 229, 229, 0.5);
+}
+
+.popup-container-error {
+  background-color: rgba(246, 218, 218, 1);
+}
+
+.popup-container input::-webkit-input-placeholder,
+.popup-container textarea::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);  
+}
+
+.popup-container input::-moz-placeholder,
+.popup-container textarea::-moz-placeholder {
+  color: rgba(70, 70, 70, 0.4);    
+}
+
+.popup-container input:-ms-input-placeholder,
+.popup-container textarea:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);    
+}
+
+.popup-container input::placeholder,
+.popup-container textarea::placeholder {
+  color: rgba(70, 70, 70, 0.4);  
+}
+
+.popup-container input:focus::-webkit-input-placeholder,
+.popup-container textarea:focus::-webkit-input-placeholder {
+  color: rgba(70, 70, 70, 1);  
+}
+
+.popup-container input:focus::-moz-placeholder,
+.popup-container textarea:focus::-moz-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.popup-container input:focus:-ms-input-placeholder,
+.popup-container textarea:focus:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 1);
+}
+
+.popup-container input:focus::placeholder,
+.popup-container textarea:focus:::placeholder {
+  color: rgba(70, 70, 70, 1);
 }
 
 .popup-container label {
@@ -1278,9 +1348,16 @@ button.btn:active {
   padding-top: 20px;
   padding-left: 20px;
   font-family: inherit;
-  background-color: #f2f2f2;
+  background-color: rgba(242, 242, 242, 0.5);
   border: none;
   outline-color: transparent;
+}
+
+.popup-container textarea:focus {
+  width: 734px;
+  min-height: 129px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 3px solid rgba(229, 229, 229, 0.5);  
 }
 
 .popup-container-display {
