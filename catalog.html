@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Девайс каталог</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -14,7 +15,7 @@
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <input class="search-text" type="text" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
             <button class="search-btn" type="submit" id="search-btn">Найти</button>
             <label class="search-label" for="search-id"></label>
           </form>
@@ -257,11 +258,10 @@
       <div class="container">
         <div class="footer-row">
           <div class="footer-logo">
-            <a href="index.html">Device</a>
+            <a href="https://device.ru">Device</a>
           </div>
           <div class="footer-login-block">
-            <a class="footer-login" href="#">Валентин Петухов</a>
-            <a class="exit" href="#">Выход</a>
+            <a class="footer-login" href="#">Войти</a>
           </div>
           <div class="footer-compare-block">
             <a class="footer-compare" href="#">Сравнить</a>
@@ -298,8 +298,7 @@
           </div>
         </div>
       </div>
-    </footer>
-   <script src="js/script.min.js"></script> 
+    </footer> 
   </body>
 </html>
         

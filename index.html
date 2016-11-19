@@ -2,8 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Девайс</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -14,7 +15,7 @@
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <input class="search-text" type="text" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
             <button class="search-btn" type="submit" id="search-btn">Найти</button>
             <label class="search-label" for="search-id"></label>
           </form>

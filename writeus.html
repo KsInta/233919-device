@@ -2,19 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Девайс</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="main-header">
       <div class="second-header container">
         <div class="header-logo">
-          Device
+          <a href="index.html">Device</a>
         </div>
         <div class="user-block">
           <form class="search-block" action="https://device.ru" method="post">
-            <input class="search-text" type="text" onkeyup="checkParams();" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
+            <input class="search-text" type="text" id="search-id" name="search" placeholder="Поиск по сайту" autocomplete="off" required>
             <button class="search-btn" type="submit" id="search-btn">Найти</button>
             <label class="search-label" for="search-id"></label>
           </form>
@@ -31,7 +32,7 @@
         <nav class="main-nav">
           <ul class="main-nav-list">
             <li class="main-nav-item sub-menu-display">
-              <a href="#">Каталог товаров</a>
+              <a href="catalog.html">Каталог товаров</a>
               <div class="sub-menu">
                 <ul class="sub-nav-list">
                   <li class="sub-nav-item">

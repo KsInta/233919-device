@@ -27,10 +27,10 @@ h2 {
 }
 
 h3 {
-  text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 h4 {
@@ -48,15 +48,15 @@ h4 {
   padding: 0 42px;
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 18px;
+  line-height: 40px;
   text-align: center; 
   vertical-align: top;
-  line-height: 40px;
   letter-spacing: 0.2em;
   text-decoration: none;
   text-transform: uppercase;
   color: black;
-  border: none;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
@@ -96,8 +96,8 @@ button.btn:active {
 .footer-logo a {
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 48px;
-  text-transform:  uppercase;
   text-decoration: none;
+  text-transform:  uppercase;  
 }
 
 .header-logo, 
@@ -127,16 +127,17 @@ button.btn:active {
 
 /*Хедер начало*/
 
- .main-header > .container {
+.main-header > .container {
   position: relative;
   width: 1040px; 
   min-height: 145px;
   margin-top: 40px;
   margin-bottom: -15px;
   padding-top: 43px; 
-  padding-left: 100px;
+  padding-left: 101px;
   padding-right: 100px;
   background-color: #f7e296;
+  border-right: none;
   box-shadow: 0 147px 0 -40px #f7e296, inset 40px 0 0 0 white, inset -40px 0 0 0 white;
 }
 
@@ -146,9 +147,15 @@ button.btn:active {
 }
 
 .user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: -6px;
   margin-bottom: 30px;
   line-height: 36px;
@@ -227,8 +234,8 @@ button.btn:active {
   height: 45px;
   padding: 0 20px;
   font: inherit;
-  border: 2px solid black;
   background: none;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -239,7 +246,7 @@ button.btn:active {
   left: -37px;
   width: 16px;
   height: 16px;
-  background-image: url(../img/sprites.png);
+  background-image: url("../img/sprites.png");
   background-position: -145px -53px;
 } 
 
@@ -274,7 +281,8 @@ button.btn:active {
 
 .login-block {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   margin-right: -5px;
   margin-left: -10px;
   text-align: right;
@@ -286,7 +294,8 @@ button.btn:active {
 
 .compare-block {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   margin-right: -179px;
   text-align: right;
 }
@@ -297,7 +306,8 @@ button.btn:active {
 
 .cart-block {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -306,8 +316,8 @@ button.btn:active {
 .cart {
   position: relative;
   display: inline-block;
-  vertical-align: top;
   padding-left: 25px;
+  vertical-align: top;
 }
 
 .exit {
@@ -324,7 +334,7 @@ button.btn:active {
 .login:active,
 .compare:active,
 .cart:active {
- opacity: 0.3;
+  opacity: 0.3;
 }
 
 .login::before,
@@ -358,15 +368,20 @@ button.btn:active {
 }
 
 .main-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding-left: 0;
   list-style: none;
 }
 
 .main-nav-item {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -383,7 +398,7 @@ button.btn:active {
   right: 44px;
   width: 16px;
   height: 16px;
-  background-image: url(../img/sprites.png);
+  background-image: url("../img/sprites.png");
   background-position: -119px -53px;
 }
 
@@ -401,7 +416,6 @@ button.btn:active {
 
 .main-nav-item:nth-child(3) {
   text-align: center;
-  
 }
 
 .main-nav-item:nth-child(4) {
@@ -427,9 +441,9 @@ button.btn:active {
 
 .sub-nav-list {
   display: none;
-  margin-right: 15px;
-  padding-left: 0;
   height: 156px;
+  margin-right: 15px;
+  padding-left: 0;  
 }
 
 .sub-nav-list:first-child {
@@ -451,9 +465,11 @@ button.btn:active {
 .sub-menu {
   position: absolute;
   z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  width: 1159px;;
-  margin-left: -59px;
+  width: 1161px;;
+  margin-left: -61px;
   background-color: #f7e296;
 }
 
@@ -576,9 +592,9 @@ button.btn:active {
 .slider-characteristics-item {
   display: inline-block;
   margin-right: 72px;
-  font-size: 13px;
-  line-height: 20px;
   vertical-align: top;
+  font-size: 13px;
+  line-height: 20px;  
 }
 
 .slider-characteristics-item span {
@@ -591,6 +607,8 @@ button.btn:active {
 .slider-input-first:checked ~ .slider-card .slider-card-item-first,
 .slider-input-second:checked ~ .slider-card .slider-card-item-second,
 .slider-input-third:checked ~ .slider-card .slider-card-item-third {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -606,8 +624,8 @@ button.btn:active {
   height: 4px;
   margin-right: 20px; 
   vertical-align: top;
-  border-radius: 50%;
   border: 3px solid black;
+  border-radius: 50%;
   opacity: 0.3;
   cursor: pointer;
 }
@@ -625,8 +643,12 @@ button.btn:active {
 /*Слайдер конец*/
 
 .catalog-preview > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 168px;
 }
 
@@ -655,13 +677,13 @@ button.btn:active {
 .catalog-preview-item-name {
   display: inline-block;
   width: 127px;
+  vertical-align: top;
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 20px;
-  vertical-align: top;
-  letter-spacing: 0.01em;
-  color: black;
   text-decoration: none;
+  letter-spacing: 0.01em;
+  color: black;  
 }
 
 .services {
@@ -724,17 +746,17 @@ button.btn:active {
 }
 
 .services-background-image-delivery { 
-  background-image: url(../img/delivery.png);
+  background-image: url("../img/delivery.png");
   background-repeat: no-repeat;
 }
 
 .services-background-image-warranty {
-  background-image: url(../img/warranty.png);
+  background-image: url("../img/warranty.png");
   background-repeat: no-repeat;
 }
 
 .services-background-image-credit {
-  background-image: url(../img/credit.png);
+  background-image: url("../img/credit.png");
   background-repeat: no-repeat;
 }
 
@@ -742,8 +764,10 @@ button.btn:active {
   color: #ffe27f;
   background-color: black;
   box-shadow: 117px 0 0 0 black;
+  -webkit-transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .services-tabs-item-input + label::after {
@@ -765,8 +789,12 @@ button.btn:active {
 }
 
 .producers > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 100px;
 }
 
@@ -782,7 +810,7 @@ button.btn:active {
 }
 
 .producers-dji:hover {
-  background-image: url(../img/logo-dji-hvr.png);
+  background-image: url("../img/logo-dji-hvr.png");
 }
 
 .producers-sp-gadgets {
@@ -805,13 +833,17 @@ button.btn:active {
   background-image: url("../img/logo-vive.png"); 
 }
 
-.producers-vive:hover  {
+.producers-vive:hover {
   background-image: url("../img/logo-vive-hvr.png");
 }
 
 .information > .container {
+  display:  -webkit-box;
+  display:  -ms-flexbox;
   display:  flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 82px;
 }
 
@@ -849,8 +881,8 @@ button.btn:active {
   width: 4px;
   height: 4px;
   margin-right: 23px; 
-  border-radius: 50%;
   border: 3px solid black;
+  border-radius: 50%;
   opacity: 0.3;
   cursor: pointer;
 }
@@ -873,7 +905,6 @@ button.btn:active {
   width: 560px;
   height: 222px;
   background: #eeeeee url("../img/map.jpg");
-  
   cursor: pointer;
 }
 
@@ -887,7 +918,7 @@ button.btn:active {
 /*Футер начало*/
 
 .main-footer {
-  padding-top: 59px;
+  padding-top: 48px;
   padding-bottom: 63px;
   background-color: #444444;
 }
@@ -899,14 +930,17 @@ button.btn:active {
 }
 
 .footer-row:nth-child(1) {
-  justify-content: flex-end;
-  
-  margin-bottom: -8px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 4px;
 }
 
 .footer-logo {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   margin-right: auto;
   line-height: 56px;
 }
@@ -916,16 +950,16 @@ button.btn:active {
 .footer-cart {
   position: relative;
   display: inline-block;
+  padding-left: 25px;
   vertical-align: top;
   line-height: 36px;
-  padding-left: 25px;
 }
 
 .footer-login-block,
 .footer-compare-block {
-  flex-basis: 100px;
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   margin-right: -305px;
   text-align: right;
 }
@@ -935,9 +969,9 @@ button.btn:active {
 }
 
 .footer-cart-block {
-  flex-basis: 100px;
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -1008,13 +1042,16 @@ button.btn:active {
 }
 
 .footer-row:nth-child(2) {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 44px;
 }
 
 .footer-row p {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   color: white;
   letter-spacing: 0;
 }
@@ -1029,8 +1066,12 @@ button.btn:active {
 }
 
 .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: -31px;
   list-style-type: none;
 }
@@ -1044,8 +1085,8 @@ button.btn:active {
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 18px;
   line-height: 20px;
-  letter-spacing: 0.2em;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -1058,7 +1099,9 @@ button.btn:active {
 }
 
 .footer-row:nth-child(3) {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-row:nth-child(3) div:first-child {
@@ -1072,7 +1115,8 @@ button.btn:active {
 .footer-line {
   position: relative;
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 
 .footer-line::before {
@@ -1086,7 +1130,8 @@ button.btn:active {
 
 .social {
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 
 .social-btn {
@@ -1141,7 +1186,8 @@ button.btn:active {
   position: relative;
   display: inline-block;
   -ms-flex-positive: 1;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   width: 27px;
   height: 34px;
   vertical-align: top;
@@ -1188,8 +1234,10 @@ button.btn:active {
 
 .popup-map-display {
   display: block;
-  animation-name: bounce;
-  animation-duration: 1s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .popup-map-display.popup-map-no-js {
@@ -1210,8 +1258,8 @@ button.btn:active {
   margin: auto;
   padding-top: 85px;
   padding-left: 100px;
-  color: black;
   line-height: 18px;
+  color: black;
   background-color: white;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2),  -50px 0 40px -50px rgba(4, 6, 6, 0.75), 50px 0 40px -50px rgba(4, 6, 6, 0.75);
 }
@@ -1223,9 +1271,9 @@ button.btn:active {
   width: 55px;
   height: 55px;
   font-size: 0;
-  border-radius: 50%;
   border: none;
-  background-color: rgba(240, 197, 46, 0.5);;
+  border-radius: 50%;
+  background-color: rgba(240, 197, 46, 0.5);
   cursor: pointer;
 }
 
@@ -1244,11 +1292,13 @@ button.btn:active {
 }
 
 .popup-container-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .popup-container-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .popup-container-close:active::before,
@@ -1266,10 +1316,10 @@ button.btn:active {
   position: relative;
   display: block;
   width: 340px;
+  height: 50px;
   margin-bottom: 35px;
   margin-right: 40px;
   padding-left: 20px;
-  height: 50px;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
@@ -1362,8 +1412,10 @@ button.btn:active {
 
 .popup-container-display {
   display: block;
-  animation-name: bounce;
-  animation-duration: 1s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .popup-container-display.popup-no-js {
@@ -1371,40 +1423,28 @@ button.btn:active {
   margin: 100px auto;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 @keyframes bounce {
   0% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-}
-
-.popup-overlay-display {
-  display: block;
-  animation-name: overlay;
-  animation-duration: 1s;
-}
-
-@keyframes overlay {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 /*Каталог начало*/
 
@@ -1439,7 +1479,7 @@ button.btn:active {
   right: -16px;
   width: 4px;
   height: 7px;
-  background-image: url(../img/sprites.png);
+  background-image: url("../img/sprites.png");
   background-position: -168px -5px;
 }
 
@@ -1460,19 +1500,23 @@ button.btn:active {
 }
 
 .products-area-top {
+  background-image: -webkit-linear-gradient(left, #dcdcdc 36.8%, #ebebeb 36.8%);
   background-image: linear-gradient(to right, #dcdcdc 36.8%, #ebebeb 36.8%);
 }
 
 .catalog-wrapper-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 70px;
 }
 
 .catalog-wrapper-top > h3 {
-  flex-basis: 268px;
+  -ms-flex-preferred-size: 268px;
+      flex-basis: 268px;
+  height: 70px;
   margin-top: 0;
   padding-left: 60px;
-  height: 70px;
   line-height: 70px;
   background-color: #dcdcdc;
 }
@@ -1481,9 +1525,14 @@ button.btn:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-basis: 760px;
+  -ms-flex-preferred-size: 760px;
+      flex-basis: 760px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 70px;
   padding-left: 72px;
   background-color: #ebebeb;
@@ -1568,32 +1617,33 @@ button.btn:active {
 }
 
 .products-area-bottom {
+  background-image: -webkit-linear-gradient(left, #eeeeee 36.8%, #ffffff 36.8%);
   background-image: linear-gradient(to right, #eeeeee 36.8%, #ffffff 36.8%);
 }
 
 .catalog-wrapper-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .filter-form {
-  flex-basis: 328px;
-  width: 100%;
+  -ms-flex-preferred-size: 328px;
+      flex-basis: 328px;
   padding-top: 58px;
   background-color: #eeeeee;
 }
 
 .fieldset {
-  padding-left: 60px;
-}
-
-.fieldset {
   margin-bottom: 45px;
+  padding-left: 60px;
 }
 
 .fieldset h4 {
   position: relative;
-  
   margin-bottom: 20px;
 }
 
@@ -1632,7 +1682,6 @@ button.btn:active {
 
 .scale {
   height: 2px;
-  
   background-color: #dbdbdb;
 }
 
@@ -1710,7 +1759,7 @@ button.btn:active {
   left: -34px;
   width: 12px;
   height: 7px;
-  background-image: url(../img/sprites.png);
+  background-image: url("../img/sprites.png");
   background-position: -102px -79px;
 }
 
@@ -1748,8 +1797,8 @@ button.btn:active {
   left: -32px;
   width: 5px;
   height: 5px;
-  border-radius: 50%;
   border: 2px solid black;
+  border-radius: 50%;
 }
 
 .filter-form .btn {
@@ -1763,8 +1812,11 @@ button.btn:active {
 }
 
 .catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 72px;
 }
 
@@ -1848,9 +1900,15 @@ button.btn:active {
 }
 
 .catalog-item-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   margin-bottom: 23px;
 }
 
@@ -1863,14 +1921,18 @@ button.btn:active {
  margin-top: -9px;
  margin-bottom: 73px;
  margin-left: 72px;
- line-height: 70px;
  vertical-align: middle;
+ line-height: 70px;
  background-color: #ebebeb;
 }
 
 .catalog-paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Gilroy Extra Bold", "Helvetica", sans-serif;
   font-size: 16px;
   letter-spacing: 0.2em;
@@ -1900,10 +1962,15 @@ button.btn:active {
 }
 
 .catalog-paginator-link {
+  display:  -webkit-box;
+  display:  -ms-flexbox;
   display:  flex; 
-  justify-content: center;
+  -webkit-box-pack: center; 
+      -ms-flex-pack: center; 
+          justify-content: center;
   -ms-flex-positive: 1;
-  flex-grow: 1; 
+  -webkit-box-flex: 1;
+          flex-grow: 1; 
   margin-left: 40px;
 }
 
@@ -1921,7 +1988,6 @@ button.btn:active {
 }
 
 /*Каталог конец*/
-
 
 /*Центровка*/
 
