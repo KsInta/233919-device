@@ -1616,8 +1616,8 @@ button.btn:active {
 }
 
 .products-area-bottom {
-  background-image: -webkit-linear-gradient(left, #eeeeee 36.8%, #ffffff 36.8%);
-  background-image: linear-gradient(to right, #eeeeee 36.8%, #ffffff 36.8%);
+  background-image: -webkit-linear-gradient(left, #eeeeee 30%, #ffffff 30%);
+  background-image: linear-gradient(to right, #eeeeee 30%, #ffffff 30%);
 }
 
 .catalog-wrapper-bottom {
