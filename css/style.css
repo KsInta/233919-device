@@ -668,6 +668,10 @@ button.btn:active {
   opacity: 0.3;
 }
 
+.catalog-preview-link img:active {
+  opacity: 0.3;
+}
+
 .catalog-preview-link img {
   display: block;
   width: 100%;
@@ -1315,29 +1319,28 @@ button.btn:active {
 .popup-container input {
   position: relative;
   display: block;
-  width: 340px;
-  height: 50px;
+  width: 334px;
+  height: 44px;
   margin-bottom: 35px;
   margin-right: 40px;
   padding-left: 20px;
   font-family: inherit;
   font-size: 14px;
   line-height: 18px;
-  background-color: rgba(242, 242, 242, 0.5);
-  border: none;
+  background-color: #f2f2f2;
+  border: 3px solid #f2f2f2;
   outline-color: transparent;
 }
 
 .popup-container input:hover,
 .popup-container textarea:hover {
-  background-color: rgba(234, 234, 234, 0.8);
+  background-color: #eaeaea;
+  border: 3px solid #eaeaea;
 }
 
 .popup-container input:focus {
-  width: 334px;
-  height: 44px;
-  background-color: rgba(255, 255, 255, 1);
-  border: 3px solid rgba(229, 229, 229, 0.5);
+  background-color: white;
+  border: 3px solid e5e5e5;
 }
 
 .popup-container-error {
@@ -1392,22 +1395,20 @@ button.btn:active {
 }
 
 .popup-container textarea {
-  width: 740px;
-  min-height: 135px;
+  width: 734px;
+  min-height: 129px;
   margin-bottom: 30px;
   padding-top: 20px;
   padding-left: 20px;
   font-family: inherit;
-  background-color: rgba(242, 242, 242, 0.5);
-  border: none;
+  background-color: #f2f2f2;
+  border: 3px solid #f2f2f2;
   outline-color: transparent;
 }
 
 .popup-container textarea:focus {
-  width: 734px;
-  min-height: 129px;
-  background-color: rgba(255, 255, 255, 1);
-  border: 3px solid rgba(229, 229, 229, 0.5);  
+  background-color: white;;
+  border: 3px solid e5e5e5;
 }
 
 .popup-container-display {
@@ -1512,8 +1513,7 @@ button.btn:active {
 }
 
 .catalog-wrapper-top > h3 {
-  -ms-flex-preferred-size: 268px;
-      flex-basis: 268px;
+  width: 268px;
   height: 70px;
   margin-top: 0;
   padding-left: 60px;
@@ -1525,14 +1525,13 @@ button.btn:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: 760px;
-      flex-basis: 760px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 760px;
   height: 70px;
   padding-left: 72px;
   background-color: #ebebeb;
@@ -1631,8 +1630,7 @@ button.btn:active {
 }
 
 .filter-form {
-  -ms-flex-preferred-size: 328px;
-      flex-basis: 328px;
+  width: 328px;
   padding-top: 58px;
   background-color: #eeeeee;
 }
