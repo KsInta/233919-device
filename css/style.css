@@ -1708,9 +1708,10 @@ button.btn:active {
   left: 109px;
 }
 
-.toggle.active {
+.toggle:active {
   background-color: #7eae29;
   border-color: white;
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .price-controls {
